@@ -1,0 +1,28 @@
+romkatv/powerlevel10k
+mroth/evalcache
+changyuheng/fz
+skywind3000/z.lua
+aloxaf/fzf-tab
+zimfw/fzf
+zdharma-continuum/fast-syntax-highlighting
+
+# prompt
+# romkatv/powerlevel10k kind:fpath
+
+# completions
+zsh-users/zsh-completions path:src kind:fpath
+
+# conf.d - run compinit in a file under the rc.d directory
+# mattmc3/zephyr path:plugins/confd
+
+mattmc3/zshrc.d
+
+
+# load standard omz settings
+ohmyzsh/ohmyzsh path:lib
+
+
+# load these last
+mattmc3/zfunctions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
