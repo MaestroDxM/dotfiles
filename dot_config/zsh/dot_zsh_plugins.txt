@@ -15,12 +15,11 @@ zsh-users/zsh-completions path:src kind:fpath
 # conf.d - run compinit in a file under the rc.d directory
 # mattmc3/zephyr path:plugins/confd
 
-mattmc3/zshrc.d
-
-
 # load standard omz settings
-ohmyzsh/ohmyzsh path:lib
+# ohmyzsh/ohmyzsh path:lib
 
+# load configs in rc.d directory
+mattmc3/zshrc.d
 
 # load these last
 mattmc3/zfunctions
