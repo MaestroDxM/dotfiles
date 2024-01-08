@@ -3,10 +3,6 @@ source /home/daniel/.cache/antidote/romkatv/powerlevel10k/powerlevel10k.zsh-them
 source /home/daniel/.cache/antidote/romkatv/powerlevel10k/powerlevel9k.zsh-theme
 fpath+=( /home/daniel/.cache/antidote/mroth/evalcache )
 source /home/daniel/.cache/antidote/mroth/evalcache/evalcache.plugin.zsh
-fpath+=( /home/daniel/.cache/antidote/changyuheng/fz )
-source /home/daniel/.cache/antidote/changyuheng/fz/fz.plugin.zsh
-fpath+=( /home/daniel/.cache/antidote/skywind3000/z.lua )
-source /home/daniel/.cache/antidote/skywind3000/z.lua/z.lua.plugin.zsh
 fpath+=( /home/daniel/.cache/antidote/aloxaf/fzf-tab )
 source /home/daniel/.cache/antidote/aloxaf/fzf-tab/fzf-tab.plugin.zsh
 fpath+=( /home/daniel/.cache/antidote/zimfw/fzf )

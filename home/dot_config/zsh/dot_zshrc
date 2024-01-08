@@ -19,6 +19,9 @@ zstyle ':antidote:bundle' use-friendly-names 'yes'
 source ${ZDOTDIR:-~}/antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
+# Zoxide must be loaded AFTER compinit
+_evalcache zoxide init zsh
+
 autoload promptinit && promptinit
 prompt powerlevel10k
 
@@ -27,4 +30,5 @@ prompt powerlevel10k
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
 
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
+# Source fzf
+# [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh

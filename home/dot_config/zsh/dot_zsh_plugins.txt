@@ -1,7 +1,7 @@
 romkatv/powerlevel10k
 mroth/evalcache
-changyuheng/fz
-skywind3000/z.lua
+# changyuheng/fz
+# skywind3000/z.lua
 aloxaf/fzf-tab
 zimfw/fzf
 zdharma-continuum/fast-syntax-highlighting
