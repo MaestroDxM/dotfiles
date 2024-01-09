@@ -8,13 +8,14 @@ export FZF_DEFAULT_OPTS=" \
 --height=80% \
 --multi \
 --preview-window=:hidden \
---preview '([[ -f {} ]] && (bat --style=numbers --color=always {} ||
-cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2>
-/dev/null | head -200'
---prompt='∼ ' --pointer='▶' --marker='✓'
---bind '?:toggle-preview'
---bind 'ctrl-a:select-all'
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2>/dev/null | head -200' \
+--prompt='∼ ' --pointer='▶' --marker='✓' \
+--bind=?:toggle-preview
 "
+#
+# fzf-tab options
+zstyle ':fzf-tab:complete:*' fzf-preview 'bat $realpath'
+zstyle ':fzf-tab:complete:*' fzf-flags --preview-window hidden:wrap
 
 # start fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] \
