@@ -1,0 +1,11 @@
+# Use fd and fzf to get the args to a command.
+# Works only with zsh
+# Examples:
+# f mv # To move files. You can write the destination after selecting the files.
+# f 'echo Selected:'
+# f 'echo Selected music:' --extension mp3
+# fm rm # To rm files in current directory
+f() {
+  sels=($(fd "${fzf_default[@]}" "${@:2}" | fzf))
+  [[ -n $sels ]] && print -z -- "$1 ${sels[*]}"
+}
