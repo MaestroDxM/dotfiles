@@ -17,6 +17,9 @@ setopt promptcr promptsp
 unsetopt BEEP
 
 # binding to allow editing command lines in $EDITOR
-autoload edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd '!' edit-command-line
+# autoload edit-command-line
+# zle -N edit-command-line
+# bindkey -M vicmd '!' edit-command-line
+
+# Bind `dotbare fedit` to <C-g>
+bindkey -s '^g' "dotbare fedit"^j

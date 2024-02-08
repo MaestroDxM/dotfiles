@@ -40,6 +40,7 @@ plugins=(
   romkatv/powerlevel10k
   mroth/evalcache
   aloxaf/fzf-tab
+  chitoku-k/fzf-zsh-completions
   wfxr/forgit
 
   # plugins that add completions must be loaded prior to this line

@@ -1,6 +1,12 @@
 # Set path environment
 typeset -U path
-path=($HOME/.local/bin $HOME/bin $HOME/.cargo/bin $path)
+path=($HOME/.local/bin
+      $HOME/bin
+      $HOME/.cargo/bin
+      $HOME/.config/fzf/bin
+      $path
+)
+
 export PATH
 
 #
@@ -26,7 +32,7 @@ export PYENV_ROOT="$HOME/.local/share/pyenv/"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Dotbare 
-# export DOTBARE_DIR="$HOME/.dotfiles"
+export DOTBARE_DIR="$HOME/.config/dotfiles"
 # export DOTBARE_TREE="$HOME/.config"
 export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
 export DOTBARE_PREVIEW="bat -n {}"

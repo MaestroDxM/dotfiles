@@ -46,6 +46,9 @@ export FZF_CTRL_T_OPTS="
 # print tree structure in preview window when using <Alt>c to cd
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
+# wrap command preview when using history widget
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
 # use ripgrep with fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
