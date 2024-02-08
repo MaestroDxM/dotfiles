@@ -13,6 +13,7 @@ alias -g L='| less'
 alias dots="dotbare"
 alias fadd="dotbare fadd"
 alias fedit="dotbare fedit"
+alias fstat="dotbare fstat"
 
 # Chezmoi aliases
 alias ch="chezmoi"
