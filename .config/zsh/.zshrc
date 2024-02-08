@@ -62,4 +62,5 @@ eval "$(fnm env --use-on-cd)"
 eval "$(pyenv init -)"
 eval "$(direnv hook zsh)"
 _dotbare_completion_cmd
+_dotbare_completion_git
 (( ! ${+functions[p10k]} )) || p10k finalize

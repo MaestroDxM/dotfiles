@@ -12,6 +12,7 @@ alias -g L='| less'
 # Dotbare aliases
 alias dots="dotbare"
 alias fadd="dotbare fadd"
+alias fedit="dotbare fedit"
 
 # Chezmoi aliases
 alias ch="chezmoi"
