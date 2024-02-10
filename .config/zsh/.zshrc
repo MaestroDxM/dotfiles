@@ -1,3 +1,12 @@
+#                 ██
+#  ██████  ██████░██      ██████  █████
+# ░░░░██  ██░░░░ ░██████ ░░██░░█ ██░░░██
+#    ██  ░░█████ ░██░░░██ ░██ ░ ░██  ░░
+#   ██    ░░░░░██░██  ░██ ░██   ░██   ██
+#  ██████ ██████ ░██  ░██░███   ░░█████
+# ░░░░░░ ░░░░░░  ░░   ░░ ░░░     ░░░░░
+#
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -46,6 +55,7 @@ plugins=(
   chitoku-k/fzf-zsh-completions
   wfxr/forgit/
   psprint/zsh-sweep
+  pschmitt/emoji-fzf.zsh
 
 
   # plugins that add completions must be loaded prior to this line

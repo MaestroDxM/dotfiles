@@ -28,3 +28,6 @@ alias chignore="nvim ~/.local/share/chezmoi/.chezmoiignore"
 alias edal="nvim ~/.config/zsh/rc.d/aliases.zsh"
 alias zedit="nvim ~/.config/zsh/.zshrc"
 alias edex="nvim ~/.config/zsh/rc.d/exports.zsh"
+
+# Emoji picker
+alias emoj="emoji-fzf preview --prepend | fzf | awk '{ print \$1 }'"
