@@ -36,12 +36,17 @@ function plugin-load
 
 # source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+# Zsweep path option
+zs_set_path=1
+
 plugins=(
   romkatv/powerlevel10k
   mroth/evalcache
   aloxaf/fzf-tab
   chitoku-k/fzf-zsh-completions
-  wfxr/forgit
+  wfxr/forgit/
+  psprint/zsh-sweep
+
 
   # plugins that add completions must be loaded prior to this line
   mattmc3/zshrc.d
@@ -56,9 +61,6 @@ plugins=(
 
 plugin-load $plugins
 
-# zsweep linter
-zs_set_path=1
-source $ZDOTDIR/plugins/zsh-sweep/zsh-sweep.plugin.zsh
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 eval "$(zoxide init zsh)"
