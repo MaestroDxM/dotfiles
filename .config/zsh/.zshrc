@@ -59,17 +59,20 @@ plugins=(
 
 
   # plugins that add completions must be loaded prior to this line
-  mattmc3/zshrc.d
   kazhala/dotbare
+  mattmc3/zshrc.d
   mattmc3/zfunctions
 
   # defered plugins for faster loading
   romkatv/zsh-defer
-  zdharma-continuum/fast-syntax-highlighting
   zsh-users/zsh-autosuggestions
+  zdharma-continuum/fast-syntax-highlighting
 )
 
 plugin-load $plugins
+
+# Bind `dotbare fedit` to <C-g>
+bindkey -s '^g' "dotbare fedit"^j
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
