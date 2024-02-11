@@ -82,6 +82,11 @@ zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX
 #█▓▒░ Don't complete unavailable commands
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
 
+#█▓▒░ Only complete directories with ls
+zstyle ':completion:*:ls:' file-patterns '*(/):directories'
+compdef _dirs eza
+
+
 #█▓▒░ Array completion element sorting
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
