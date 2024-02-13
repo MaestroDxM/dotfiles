@@ -1,11 +1,19 @@
-#                 ██
-#  ██████  ██████░██
-# ░░░░██  ██░░░░ ░██████
+#                 ██     
+#                ░██     
+#  ██████  ██████░██     
+# ░░░░██  ██░░░░ ░██████ 
 #    ██  ░░█████ ░██░░░██
 #   ██    ░░░░░██░██  ░██
 #  ██████ ██████ ░██  ░██
-# ░░░░░░ ░░░░░░  ░░   ░░
-#
+# ░░░░░░ ░░░░░░  ░░   ░░ 
+#                               ██████  ░██          ░██  ░░                           
+#   █████   ██████  ██████████ ░██░░░██ ░██  █████  ██████ ██  ██████  ███████   ██████
+#  ██░░░██ ██░░░░██░░██░░██░░██░██  ░██ ░██ ██░░░██░░░██░ ░██ ██░░░░██░░██░░░██ ██░░░░ 
+# ░██  ░░ ░██   ░██ ░██ ░██ ░██░██████  ░██░███████  ░██  ░██░██   ░██ ░██  ░██░░█████ 
+# ░██   ██░██   ░██ ░██ ░██ ░██░██░░░   ░██░██░░░░   ░██  ░██░██   ░██ ░██  ░██ ░░░░░██
+# ░░█████ ░░██████  ███ ░██ ░██░██      ███░░██████  ░░██ ░██░░██████  ███  ░██ ██████ 
+#  ░░░░░   ░░░░░░  ░░░  ░░  ░░ ░░      ░░░  ░░░░░░    ░░  ░░  ░░░░░░  ░░░   ░░ ░░░░░░  
+
 
 #█▓▒░  Options
 setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
@@ -21,7 +29,7 @@ unsetopt FLOW_CONTROL       # Disable start/stop characters in shell editor.
 LS_COLORS=${LS_COLORS:-$(vivid generate catppuccin-mocha)}
 
 #█▓▒░ Initialize autocompletion systems
-fpath=($HOME/.config/zsh/completions $fpath)
+fpath=($HOME/.config/zsh/completions $ASDF_DIR/completions $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 _comp_path="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
@@ -81,6 +89,13 @@ zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX
 
 #█▓▒░ Don't complete unavailable commands
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
+
+#█▓▒░ Only complete directories with ls
+# zstyle ':completion:*:eza:' file-patterns '*(/):directories'
+# compdef _dirs eza
+
+# Colorscript comletion
+compdef '_files -W "/home/daniel/bin/colorscripts"' colorscript
 
 #█▓▒░ Array completion element sorting
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters

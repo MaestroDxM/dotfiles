@@ -29,7 +29,8 @@ export FZF_DEFAULT_OPTS=" \
 --preview-window=:hidden \
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2>/dev/null | head -200' \
 --prompt='∼ ' --pointer='▶' --marker='✓' \
---bind=?:toggle-preview
+--bind=?:toggle-preview \
+--bind=ctrl-f:jump
 "
 
 #
@@ -58,5 +59,15 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
 #
 # fzf-tab options
+# set description format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# use bat for colorized previews
 zstyle ':fzf-tab:complete:*' fzf-preview 'bat $realpath'
+# preview directory contents with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# switch groups using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
+# start with preview window hidden
 zstyle ':fzf-tab:complete:*' fzf-flags --preview-window hidden:wrap
+# define keybindings 
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:jump' 
