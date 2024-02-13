@@ -48,9 +48,7 @@ function plugin-load
 plugins=(
   romkatv/powerlevel10k
   wfxr/forgit/
-  psprint/zsh-sweep
-  pschmitt/emoji-fzf.zsh
-
+  yuki-yano/zeno.zsh
 
   # plugins that add completions must be loaded prior to this line
   kazhala/dotbare

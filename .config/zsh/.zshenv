@@ -26,8 +26,6 @@ export PATH
 #█▓▒░ Environment Variables
 export EDITOR="nvim"
 export LS_COLORS="$(vivid generate catppuccin-mocha)"
-export ZSH_EVALCACHE_DIR="$HOME/.cache/evalcache"
-export ZSH_EVALCACHE_DISABLE="false"
 
 #█▓▒░ NNN File Manager Options
 # Keybinds to be completed with plugin leader key (';')
@@ -49,12 +47,11 @@ export DOTBARE_KEY="
   --bind=alt-s:toggle-sort
   --bind=alt-t:toggle-preview
 "
-# export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"
-
 export DOTBARE_FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=bg:#1e1e2e,bg+:#262626,hl:#f38ba8,hl+:#5fd7ff \
+--color=fg:#cdd6f4,fg+:#d0d0d0,header:#f38ba8,info:#cba6f7 \
+--color=marker:#f5e0dc,prompt:#cba6f7,spinner:#f5e0dc,pointer:#f5e0dc \
+--color=border:#262626,label:#aeaeae,query:#d9d9d9 \
 --layout=reverse \
 --info=inline \
 --height=80% \
