@@ -66,8 +66,13 @@ plugins=(
   # defered plugins for faster loading
   romkatv/zsh-defer
   zsh-users/zsh-autosuggestions
+  mellbourn/zabb
   zdharma-continuum/fast-syntax-highlighting
 )
+
+#█▓▒░ ASDF must be loaded before compinit, which will be called by plugin-load
+source "$XDG_DATA_HOME/asdf/asdf.sh"
+
 
 plugin-load $plugins
 
@@ -77,9 +82,9 @@ bindkey -s '^g' "dotbare fedit"^j
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 eval "$(zoxide init zsh)"
-eval "$(fnm env --use-on-cd)"
-eval "$(pyenv init -)"
+# eval "$(fnm env --use-on-cd)"
+# eval "$(pyenv init -)"
 eval "$(direnv hook zsh)"
+# _dotbare_completion_git
 _dotbare_completion_cmd
-_dotbare_completion_git
 (( ! ${+functions[p10k]} )) || p10k finalize
