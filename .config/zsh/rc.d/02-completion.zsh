@@ -91,8 +91,8 @@ zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
 
 #█▓▒░ Only complete directories with ls
-zstyle ':completion:*:eza:' file-patterns '*(/):directories'
-compdef _dirs eza
+# zstyle ':completion:*:eza:' file-patterns '*(/):directories'
+# compdef _dirs eza
 
 # Colorscript comletion
 compdef '_files -W "/home/daniel/bin/colorscripts"' colorscript

@@ -45,14 +45,8 @@ function plugin-load
 
 # source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Zsweep path option
-zs_set_path=1
-
 plugins=(
   romkatv/powerlevel10k
-  mroth/evalcache
-  aloxaf/fzf-tab
-  chitoku-k/fzf-zsh-completions
   wfxr/forgit/
   psprint/zsh-sweep
   pschmitt/emoji-fzf.zsh
@@ -62,6 +56,7 @@ plugins=(
   kazhala/dotbare
   mattmc3/zshrc.d
   mattmc3/zfunctions
+  aloxaf/fzf-tab
 
   # defered plugins for faster loading
   romkatv/zsh-defer
@@ -76,15 +71,10 @@ source "$XDG_DATA_HOME/asdf/asdf.sh"
 
 plugin-load $plugins
 
-# Bind `dotbare fedit` to <C-g>
-bindkey -s '^g' "dotbare fedit"^j
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 eval "$(zoxide init zsh)"
-# eval "$(fnm env --use-on-cd)"
-# eval "$(pyenv init -)"
 eval "$(direnv hook zsh)"
-# _dotbare_completion_git
 _dotbare_completion_cmd
 (( ! ${+functions[p10k]} )) || p10k finalize

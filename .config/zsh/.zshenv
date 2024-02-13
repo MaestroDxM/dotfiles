@@ -1,11 +1,5 @@
-#█▓▒░ Pyenv Settings
-export PYENV_ROOT="$HOME/.local/share/pyenv/"
-
 #█▓▒░ Golang Optioins
-
-# export GOROOT="$HOME/.cache/asdf/plugins/golang/set-env.zsh"
-# export GOPATH="$HOME/code/go"
-#█▓▒░ Source set-env.zsh from asdf Go plugin to set GOROOT and GOPATH
+# Source set-env.zsh from asdf Go plugin to set GOROOT and GOPATH
 source "$XDG_CACHE_HOME/asdf/plugins/golang/set-env.zsh"
 
 
@@ -13,6 +7,7 @@ source "$XDG_CACHE_HOME/asdf/plugins/golang/set-env.zsh"
 export ASDF_DIR="$XDG_DATA_HOME/asdf"
 export ASDF_DATA_DIR="$XDG_CACHE_HOME/asdf"
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/asdfrc"
+export ASDF_FORCE_PREPEND=yes
 
 #█▓▒░ Set path environment
 typeset -U path
