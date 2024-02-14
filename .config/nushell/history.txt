@@ -33,3 +33,16 @@ exit
 zoxide init nushell | str replace --string --all 'let-env ' '$env.' | save -f ~/.zoxide.nu
 nvim ../nushell/config.nu
 exit
+df
+z tmp1285123/
+cd tmp1285123/
+ls
+bunzip2 restic_0.16.4_linux_amd64.bz2
+ls
+sha256sum restic_0.16.4_linux_amd64
+bat SHA256SUMS
+sha256sum -c SHA256SUMS
+sha256sum -c restic_0.16.4_linux_amd64
+sha256sum -c SHA256SUMS
+hcl restic/restic
+exit

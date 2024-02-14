@@ -59,7 +59,7 @@ plugins=(
   romkatv/zsh-defer
   zsh-users/zsh-autosuggestions
   mellbourn/zabb
-  zdharma-continuum/fast-syntax-highlighting
+  z-shell/f-sy-h
 )
 
 #█▓▒░ ASDF must be loaded before compinit, which will be called by plugin-load
