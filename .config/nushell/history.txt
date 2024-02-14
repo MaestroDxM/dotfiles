@@ -1,0 +1,35 @@
+ls
+ls rc.d/
+broot
+ps
+z rc
+zoxide
+zoxide rc
+zoxide init 
+zoxide init nu
+zoxide init nushell
+z rc
+eval $(zoxide init nushell)
+zoxide init nushell | save -f ~/.config/nushell/env.nu
+z
+zoxide init nushell
+$nu.env-path
+nvim ../nushell/env.nu
+exit
+z rc
+ls -a ~
+source ~/.zoxide.nu
+__zoxide_z rc
+__zoxide_z
+exit
+exit
+z
+nivm .zoxide.nu
+la
+ls -a
+nvim .zoxide.nu
+source ~/.zoxide.nu
+exit
+zoxide init nushell | str replace --string --all 'let-env ' '$env.' | save -f ~/.zoxide.nu
+nvim ../nushell/config.nu
+exit

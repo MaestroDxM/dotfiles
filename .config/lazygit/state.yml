@@ -1,0 +1,10 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/daniel/projects/pygoat
+- /home/daniel/projects/pyrogue
+- /home/daniel/.local/share/chezmoi
+- /home/daniel/repos/bat
+startuppopupversion: 5
+customcommandshistory: []
+hidecommandlog: true
+ignorewhitespaceindiffview: false

@@ -1,0 +1,74 @@
+[global_config]
+  focus = mouse
+  enabled_plugins = SaveLastSessionLayout, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, CurrDirOpen, CustomCommandsMenu, InsertTermName
+[keybindings]
+  next_tab = <Shift>Page_Down
+  prev_tab = <Shift>Page_Up
+[profiles]
+  [[default]]
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+  [[Catppuccin_Mocha]]
+    background_color = "#1e1e2e"
+    background_darkness = 0.92
+    background_type = transparent
+    background_image = None
+    foreground_color = "#cdd6f4"
+    palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = Catppuccin_Mocha
+  [[SaveLastSessionLayout]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = False
+      fullscreen = False
+      size = 680, 471
+      title = fzf.zsh (~/.config/zsh/rc.d) - NVIM
+      last_active_window = True
+    [[[child1]]]
+      type = Notebook
+      parent = child0
+      order = 0
+      labels = None, None, None
+      last_active_term = 22a07d02-2037-458e-9236-f01b9059d84e, 6ddea811-13de-4c37-b070-c2aafe290b3c, fbb7d12f-48d9-4718-9b9d-717daae4ec9a
+      active_page = 0
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      group = Window group 2
+      profile = Catppuccin_Mocha
+      uuid = 22a07d02-2037-458e-9236-f01b9059d84e
+      directory = /home/daniel/.config/zsh
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      group = Window group 2
+      profile = Catppuccin_Mocha
+      uuid = 6ddea811-13de-4c37-b070-c2aafe290b3c
+      directory = /home/daniel/.config/zsh
+    [[[terminal4]]]
+      type = Terminal
+      parent = child1
+      order = 2
+      group = Window group 2
+      profile = Catppuccin_Mocha
+      uuid = fbb7d12f-48d9-4718-9b9d-717daae4ec9a
+      directory = /home/daniel/.config/zsh
+[plugins]
+  [[CustomCommandsMenu]]
+    [[[open_zsh]]]
+      enabled = True
+      name = open_zsh
+      command = terminator --new-tab -p Catppuccin_Mocha -x open_zsh
+      position = 0
