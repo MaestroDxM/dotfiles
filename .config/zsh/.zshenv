@@ -1,7 +1,11 @@
+#█▓▒░ XDG Dirs
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_DIR="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 #█▓▒░ Golang Optioins
 # Source set-env.zsh from asdf Go plugin to set GOROOT and GOPATH
 source "$XDG_CACHE_HOME/asdf/plugins/golang/set-env.zsh"
-
 
 #█▓▒░ ASDF home directory
 export ASDF_DIR="$XDG_DATA_HOME/asdf"

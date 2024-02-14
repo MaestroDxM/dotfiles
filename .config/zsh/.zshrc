@@ -48,7 +48,6 @@ function plugin-load
 plugins=(
   romkatv/powerlevel10k
   wfxr/forgit/
-  yuki-yano/zeno.zsh
 
   # plugins that add completions must be loaded prior to this line
   kazhala/dotbare
